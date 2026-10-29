@@ -1,0 +1,201 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+  <defs>
+    <!-- Background Circle Radial Gradient: True high-saturation Royal Blue -->
+    <radialGradient id="badgeRadial" cx="50%" cy="36%" r="64%">
+      <stop offset="0%" stop-color="#0062f5" />
+      <stop offset="50%" stop-color="#0043c7" />
+      <stop offset="82%" stop-color="#002d99" />
+      <stop offset="100%" stop-color="#001e73" />
+    </radialGradient>
+
+    <!-- Shield Border Gradient: Crisp light blue to deep cyan -->
+    <linearGradient id="shieldBorder" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="18%" stop-color="#cbebfd" />
+      <stop offset="65%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+
+    <!-- Shield Interior Gradient -->
+    <linearGradient id="shieldInterior" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#0c5ce6" />
+      <stop offset="48%" stop-color="#0243be" />
+      <stop offset="100%" stop-color="#002373" />
+    </linearGradient>
+
+    <!-- Globe Sphere Radial Gradient -->
+    <radialGradient id="globeSphere" cx="38%" cy="36%" r="64%">
+      <stop offset="0%" stop-color="#1e7df6" />
+      <stop offset="45%" stop-color="#0b52c6" />
+      <stop offset="85%" stop-color="#023086" />
+      <stop offset="100%" stop-color="#011b58" />
+    </radialGradient>
+
+    <!-- Pin Inner Cutout -->
+    <linearGradient id="pinHole" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#0369a1" />
+    </linearGradient>
+  </defs>
+
+  <!-- 1. Pure Crisp Circular Base -->
+  <circle cx="300" cy="300" r="294" fill="url(#badgeRadial)" />
+
+  <!-- 2. Security Shield -->
+  <!-- Outer Shield Crest & Border -->
+  <path d="M 300 70
+           C 368 70, 426 94, 452 126
+           C 458 192, 444 282, 396 340
+           C 362 380, 324 400, 300 410
+           C 276 400, 238 380, 204 340
+           C 156 282, 142 192, 148 126
+           C 174 94, 232 70, 300 70 Z"
+        fill="url(#shieldInterior)"
+        stroke="url(#shieldBorder)"
+        stroke-width="11"
+        stroke-linejoin="round" />
+
+  <!-- Inner Shield Trim Accent -->
+  <path d="M 300 86
+           C 358 86, 408 106, 432 134
+           C 438 190, 426 268, 384 322
+           C 354 360, 322 378, 300 386
+           C 278 378, 246 360, 216 322
+           C 174 268, 162 190, 168 134
+           C 192 106, 242 86, 300 86 Z"
+        fill="none"
+        stroke="#bae6fd"
+        stroke-width="2"
+        opacity="0.65" />
+
+  <!-- 3. Globe (Earth Sphere) -->
+  <circle cx="300" cy="248" r="98" fill="url(#globeSphere)" />
+  <circle cx="300" cy="248" r="98" fill="none" stroke="#7dd3fc" stroke-width="1.5" opacity="0.6" />
+
+  <!-- Continents in Sharp, Pure White -->
+  <!-- North America -->
+  <path d="M 234 180
+           C 240 176, 250 180, 254 186
+           C 256 194, 250 200, 244 204
+           C 238 208, 234 216, 238 224
+           C 242 232, 250 236, 252 246
+           C 254 256, 248 266, 242 274
+           C 236 270, 226 262, 222 250
+           C 216 236, 210 216, 214 200
+           C 218 186, 226 182, 234 180 Z"
+        fill="#ffffff" />
+  <circle cx="258" cy="168" r="6" fill="#ffffff" />
+
+  <!-- South America -->
+  <path d="M 246 270
+           C 256 272, 266 280, 268 292
+           C 270 306, 262 320, 254 334
+           C 248 344, 242 350, 238 344
+           C 236 330, 238 316, 240 304
+           C 238 292, 242 280, 246 270 Z"
+        fill="#ffffff" />
+
+  <!-- Europe & Eurasia -->
+  <path d="M 292 184
+           C 302 176, 320 178, 334 186
+           C 348 196, 354 210, 350 222
+           C 344 230, 330 228, 324 234
+           C 318 240, 322 250, 316 258
+           C 308 258, 302 248, 300 238
+           C 298 226, 302 216, 298 210
+           C 292 202, 288 192, 292 184 Z"
+        fill="#ffffff" />
+
+  <!-- Africa & Arabian Peninsula -->
+  <path d="M 318 238
+           C 332 238, 348 244, 354 258
+           C 358 272, 348 288, 338 302
+           C 330 312, 322 304, 318 294
+           C 312 280, 312 264, 314 252
+           C 314 244, 316 240, 318 238 Z"
+        fill="#ffffff" />
+  <circle cx="356" cy="254" r="5" fill="#ffffff" />
+
+  <!-- 4. Location Pin Standing Directly Atop Globe -->
+  <g transform="translate(300, 172)">
+    <!-- White Map Pin -->
+    <path d="M 0 -44
+             C -26 -44, -42 -22, -42 4
+             C -42 32, 0 70, 0 70
+             C 0 70, 42 32, 42 4
+             C 42 -22, 26 -44, 0 -44 Z"
+          fill="#ffffff" />
+    <!-- Pin Center Hole Cutout -->
+    <circle cx="0" cy="3" r="16" fill="url(#pinHole)" />
+    <!-- Pin Specular Dot -->
+    <circle cx="0" cy="3" r="6" fill="#bae6fd" opacity="0.6" />
+  </g>
+
+  <!-- 5. Orbital Ring: THIN, SHARP, AND ULTRA-CLEAN -->
+  <!-- Swoops smoothly in front of globe and extends out past left shield edge -->
+  <path d="M 108 306
+           C 114 336, 222 352, 338 322
+           C 428 298, 486 246, 484 198"
+        fill="none"
+        stroke="#ffffff"
+        stroke-width="2.2"
+        stroke-linecap="round" />
+
+  <!-- Thin inner orbital accent line -->
+  <path d="M 124 300
+           C 134 322, 224 338, 326 312
+           C 404 292, 458 248, 464 208"
+        fill="none"
+        stroke="#7dd3fc"
+        stroke-width="1.1"
+        opacity="0.85" />
+
+  <!-- 6. White Jet Airplane Flying Top-Right -->
+  <!-- Positioned at top-right of orbit, crisp solid silhouette -->
+  <g transform="translate(422, 192) rotate(42)">
+    <!-- Fuselage Body -->
+    <path d="M 0 -38
+             C 8 -32, 8 28, 0 42
+             C -8 28, -8 -32, 0 -38 Z"
+          fill="#ffffff" />
+    <!-- Wings -->
+    <path d="M 0 -10
+             L 52 16
+             L 46 24
+             L 0 10
+             L -46 24
+             L -52 16 Z"
+          fill="#ffffff" />
+    <!-- Tail Fin & Horizontal Stabilizers -->
+    <path d="M 0 26
+             L 22 42
+             L 18 46
+             L 0 40
+             L -18 46
+             L -22 42 Z"
+          fill="#ffffff" />
+  </g>
+
+  <!-- 7. Typography: Sharp, Crisp Vector Letters with Zero Blur -->
+  <!-- Line 1: "SAFETY & SECURE" in Pure White Bold Sans -->
+  <text x="300" y="464"
+        text-anchor="middle"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
+        font-size="44"
+        font-weight="900"
+        letter-spacing="3"
+        fill="#ffffff">
+    SAFETY &amp; SECURE
+  </text>
+
+  <!-- Line 2: "TOUR 360° - AI" in Vibrant Electric Cyan Bold Sans -->
+  <text x="300" y="522"
+        text-anchor="middle"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
+        font-size="44"
+        font-weight="900"
+        letter-spacing="4"
+        fill="#00e5ff">
+    TOUR 360° - AI
+  </text>
+</svg>

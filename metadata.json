@@ -1,0 +1,9 @@
+{
+  "name": "SAFETY & RESCUE TOUR 360°– AI",
+  "description": "AI-Powered Tourist and Public Safety Platform with real-time SOS, smart check-in, geofencing, offline safety maps, and blockchain digital ID.",
+  "requestFramePermissions": [
+    "geolocation",
+    "microphone"
+  ],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
